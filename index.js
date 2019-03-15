@@ -35,7 +35,7 @@ class Eslint {
         : config.include
 
       config.test = Array.isArray(config.test)
-        ? (Regexp(RegExp(`\\.(${config.test.join('|')})$`)))
+        ? RegExp(`\\.(${config.test.join('|')})$`)
         : /\.(js|vue)$/
     }
 
